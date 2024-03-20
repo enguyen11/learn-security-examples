@@ -1,3 +1,8 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
-Which CIA property does tampering violate?
+Which CIA property does info disclosure violate?
 What additional security mechanisms can you incorporate?
+
+The vulnerability is it leaks personal or private information by putting the user entered values in the url.
+The secure version addresses this by replacing the non-alphanumeric values. This violates the confidentiality property
+because it personal or private information in the url and nonauthorized users can view and use this information.
+You can address this problem implementing a caesar cipher to shift the values.

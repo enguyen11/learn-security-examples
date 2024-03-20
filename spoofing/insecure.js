@@ -4,6 +4,10 @@ const session = require("express-session")
 const app = express();
 app.use(express.urlencoded({ extended: false }))
 
+/* Not safe because server sends a session id in the cookies and another user can copy that cookie and masquerade as
+an authorized user.
+
+ */
 app.use(
   session({
     secret: "SOMESECRET",

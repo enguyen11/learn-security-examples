@@ -33,8 +33,9 @@ app.get("/", (req, res) => {
 
   if (req.session.user) name = req.session.user
 
+    //Assumes name is a string, not JS code
   res.send(`
-  <h1>Welcome, ${name}</h1>
+  <h1>Welcome, ${name}</h1> 
   <form action="/register" method="POST">
     <input type="text" name="name" placeholder="Your name">
     <button>Submit</button>

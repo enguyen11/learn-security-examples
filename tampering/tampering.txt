@@ -1,0 +1,9 @@
+Briefly explain the vulnerability and why the secure version prevents the
+vulnerability.
+Which CIA property does tampering violate?
+
+In the insecure.js file, we render the user name assuming it is a string not code. In secure.js we use
+a function called escapeHTML to replace special characters in the input
+with its string equivalent to convert the script into a string.
+This violates integrity because the program tries to render a
+string but is instead used to execute a script which was not its intended purpose.

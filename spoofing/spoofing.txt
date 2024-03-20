@@ -1,1 +1,7 @@
 Briefly explain the vulnerability and why the secure version prevents the vulnerability.
+
+In the insecure version, it provides some protection by hiding everything behind a session id.
+However, this is also the vulnerability because the id is not configured correctly. A malicious user can
+use the session id generated in insecure.js to login as an existing user. In secure.js we make the
+session id unreadable so the attacker can't use that session id. This violates Confidentiality in CIA because
+users other than the authorized user can gain access.
