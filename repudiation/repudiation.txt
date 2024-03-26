@@ -1,2 +1,7 @@
 - Briefly explain the vulnerability and why the secure version is better at preventing repudiation than the insecure version.
 - What additional security mechanisms can you incorporate to prevent such attacks?
+
+In insecure.js, it gets and posts the messages and displays who sent the message but in this file, it does not keep
+track of who and when an action was taken. In secure.js we address this by keeping a log file to keep track of every
+action taken while logged in. We should make the log file hidden so it would be more difficult for unauthorized users to
+find. We should also keep multiple copies so we have backups if it gets lost or corrupted.
